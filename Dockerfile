@@ -18,7 +18,6 @@ RUN yum upgrade -y; \
     yum install -y wget; \
     yum install -y epel-release && \
     yum install -y nmon && \
-    yum install -y cronie && \
     wget --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u162-b12/0da788060d494f5095bf8624735fa2f1/jdk-8u162-linux-x64.rpm && \
     rpm -i jdk-8u162-linux-x64.rpm && \
     rm -f jdk-8u162-linux-x64.rpm  && \
