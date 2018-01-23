@@ -12,13 +12,14 @@ ADD app.jar /
 CMD ["/app.jar"]
 ```
 
+
 and run it by command
 
 ```
 docker run -e JAVA_OPTS="-Xms1024M -Xmx2048M" some_extended_image
 ```
 
-###Linux process monitoring feature:
+***Linux process monitoring feature:***
 
 Image include [NMON](http://nmon.sourceforge.net/pmwiki.php) tool.
 
@@ -39,7 +40,8 @@ docker run \
 
 nmon logs will be collected in /logs dir inside container.
 
-###Schedule tasks runner feature:
+***Schedule tasks runner feature:***
+
 It is possible to execute sh scripts or application packed to jar archive with given delay.
 For instance, it might be shell for uploading nmon files to s3 bucket or so on.
 
@@ -55,6 +57,7 @@ ADD some-task.sh /scheduled-tasks/some-task.sh
 
 CMD ["/app.jar"]
 ```
+
 
 3. Provide env variable with delay in seconds.
 
