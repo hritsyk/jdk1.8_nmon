@@ -10,6 +10,8 @@ ENV CAPTURING_INTERVAL=1
 ENV CAPTURING_COUNT=300
 ENV JAVA_OPTS "-Xms1024M -Xmx2048M"
 ENV SCHEDULED_TASK_INTERVAL 60
+ENV LOG_DIR /logs
+ENV NMON_START 0
 
 
 RUN yum upgrade -y; \
@@ -21,6 +23,7 @@ RUN yum upgrade -y; \
     rpm -i jdk-8u162-linux-x64.rpm && \
     rm -f jdk-8u162-linux-x64.rpm  && \
     mkdir /scheduled-tasks && \
+    mkdir /logs && \
     yum clean all
 
 RUN yum remove wget;  yum clean all
