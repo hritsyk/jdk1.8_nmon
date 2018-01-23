@@ -10,5 +10,7 @@ else
     echo "nmon capturing disabled"
 fi
 
+./scheduled-task-runner.sh &
+
 #run application
 exec java $JAVA_OPTS -jar $APP_JAR
