@@ -46,7 +46,7 @@ It is possible to execute sh scripts or application packed to jar archive with g
 For instance, it might be shell for uploading nmon files to s3 bucket or so on.
 
 To run with scheduled tasks:
-1. Provide shell of jar you want to execute. 
+1. Provide shell or jar you want to execute. 
 2. In extended image add it's to /scheduled-tasks folder
 ```
 FROM igrytsyk/jdk
